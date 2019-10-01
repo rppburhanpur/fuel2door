@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "596138214200",
+    "firebase_url": "https://fuel2door.firebaseio.com",
+    "project_id": "fuel2door",
+    "storage_bucket": "fuel2door.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:596138214200:android:5c5b0be0433a6ac77cf7cd",
+        "android_client_info": {
+          "package_name": "com.rppburhanpur.fuel2door"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "596138214200-phc2upeal5tucpe76u4dh2tbk2fpt6oj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.rppburhanpur.fuel2door",
+            "certificate_hash": "4e347e6c973a8c8e35500615e84adbbc69b40e4e"
+          }
+        },
+        {
+          "client_id": "596138214200-9arcs360u60dlvk9e4sqo9l7jncqktc0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyACO0vG3XS_Kp4lzTXpon94hWAOitGk0vk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "596138214200-9arcs360u60dlvk9e4sqo9l7jncqktc0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
