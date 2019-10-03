@@ -30,7 +30,7 @@ class SplashRunner implements Runnable{
 
     @Override
     public void run() {
-        startActivityIntent = new Intent(splash,MainActivity.class);
+        startActivityIntent = new Intent(splash,User_Registration.class);
         splash.startActivity(startActivityIntent);
         splash.finish();
     }
