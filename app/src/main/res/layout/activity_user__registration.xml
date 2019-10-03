@@ -21,15 +21,14 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="135dp"
+        android:layout_width="@dimen/Fueltank_Width"
+        android:layout_height="@dimen/Fueltank_Height"
+        android:layout_marginBottom="32dp"
         android:scaleType="fitXY"
         android:src="@drawable/ic_gasicon"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/otp_EditText"
-        app:layout_constraintVertical_bias="0.93"></ImageView>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"></ImageView>
 
     <TextView
         android:id="@+id/textView"
@@ -46,77 +45,80 @@
         app:layout_constraintTop_toTopOf="parent"></TextView>
 
     <EditText
-        android:id="@+id/phonenumber_EditText"
+        android:id="@id/MobileNumber_EditText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
         android:background="@drawable/ic_edittextbackgroundforregisterscreen"
-        android:hint="Enter Mobile No."
+        android:hint="@string/enter_text"
         android:paddingLeft="18dp"
         android:textColor="#fff"
+        android:inputType="phone"
         android:textColorHint="#fff"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"></EditText>
 
     <Button
-        android:id="@+id/otp_button"
+        android:id="@id/Send_OTP_Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/ic_regisscreenregisbuttonbackground"
-        android:text="Get OTP"
+        android:text="@string/get_otp"
         android:textColor="#fff"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/phonenumber_EditText"
+        app:layout_constraintTop_toBottomOf="@id/MobileNumber_EditText"
         app:layout_constraintVertical_bias="0.042"></Button>
 
     <EditText
-        android:id="@+id/otp_EditText"
+        android:id="@id/OTP_EditText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:inputType="numberDecimal"
         android:background="@drawable/ic_edittextbackgroundforregisterscreen"
-        android:hint="Enter OTP"
+        android:hint="@string/enter_otp"
         android:paddingLeft="18dp"
         android:textColor="#fff"
         android:textColorHint="#fff"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/otp_button"></EditText>
+        app:layout_constraintTop_toBottomOf="@id/Send_OTP_Button"></EditText>
 
 
     <Button
-        android:id="@+id/regis_button"
+        android:id="@id/Register_Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/ic_regisscreenregisbuttonbackground"
-        android:text="Register"
+        android:text="@string/register"
         android:textColor="#fff"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/otp_EditText"
+        app:layout_constraintTop_toBottomOf="@id/OTP_EditText"
         app:layout_constraintVertical_bias="0.061"></Button>
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="28dp"
         android:text="@string/app_name"
         android:textColor="#fff"
         android:textSize="12sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.025"
-        app:layout_constraintStart_toEndOf="@+id/imageView2"
-        app:layout_constraintTop_toBottomOf="@+id/otp_EditText"
-        app:layout_constraintVertical_bias="0.931"></TextView>
+        app:layout_constraintHorizontal_bias="0.541"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/OTP_EditText"
+        app:layout_constraintVertical_bias="0.941"></TextView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

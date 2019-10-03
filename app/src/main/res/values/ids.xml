@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="MobileNumber_EditText" type="id"></item>
+    <item name="OTP_EditText" type="id"></item>
+    <item name="Send_OTP_Button" type="id"></item>
+    <item name="Register_Button" type="id"></item>
+</resources>

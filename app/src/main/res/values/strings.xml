@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Fuel2Door</string>
+    <string name="Registration">Registration</string>
+    <string name="enter_text">Enter Mobile No.</string>
+    <string name="enter_otp">Enter OTP</string>
+    <string name="get_otp">GET OTP</string>
+    <string name="register">REGISTER</string>
 </resources>

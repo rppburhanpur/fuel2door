@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="Text_Height"></dimen>
+    <dimen name="Fueltank_Width">25dp</dimen>
+    <dimen name="Fueltank_Height">25dp</dimen>
 </resources>
