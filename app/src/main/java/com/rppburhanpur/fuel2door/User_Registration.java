@@ -12,6 +12,5 @@ public class User_Registration extends AppCompatActivity {
         setContentView(R.layout.activity_user__registration);
 
 
-
     }
 }
