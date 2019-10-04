@@ -34,7 +34,7 @@
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/appname"
         android:id="@+id/RL1"
-        android:layout_marginTop="20sp"
+        android:layout_marginTop="20dp"
         >
 
         <TextView
@@ -42,7 +42,6 @@
             android:layout_height="wrap_content"
             android:text="Enter Your Mobile Number"
             android:id="@+id/mobilenumbertv"
-
             >
 
         </TextView>
@@ -52,6 +51,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/mobilenumberet"
             android:layout_below="@+id/mobilenumbertv"
+            android:inputType="phone"
+            android:maxLength="10"
             android:width="250sp"
             >
 
@@ -61,8 +62,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/sendotpbtn"
-            android:layout_toRightOf="@+id/mobilenumberet"
-            android:layout_below="@id/mobilenumbertv"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/mobilenumberet"
             android:text="Send OTP"
             android:background="#3C5286"
             >
@@ -74,7 +75,7 @@
             android:layout_height="wrap_content"
             android:text="Enter OTP"
             android:id="@+id/otptv"
-            android:layout_below="@+id/mobilenumberet"
+            android:layout_below="@+id/sendotpbtn"
             android:layout_marginTop="20sp"
             >
 
@@ -84,8 +85,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/otpet"
+            android:inputType="phone"
             android:layout_below="@id/otptv"
             android:width="250dp"
+            android:maxLength="6"
             >
 
         </EditText>
@@ -93,7 +96,7 @@
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Accepting our Terms and Cervices"
+            android:text="Accepting our Terms and Services"
             android:id="@+id/tccheckbox"
             android:layout_below="@+id/otpet"
             android:layout_marginTop="20sp"

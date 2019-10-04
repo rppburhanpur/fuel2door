@@ -15,6 +15,22 @@
       },
       "oauth_client": [
         {
+          "client_id": "596138214200-cqs5ii9d5rppi557tru9n38962887sr7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.rppburhanpur.fuel2door",
+            "certificate_hash": "3e4577277ec5a42ba2ef81a2905e94d5982c31bc"
+          }
+        },
+        {
+          "client_id": "596138214200-15nn8e6mp2bh8ern5j43o2c7utjsiku5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.rppburhanpur.fuel2door",
+            "certificate_hash": "36c7ba09253afd5b529cf8a12cb66084d1d68483"
+          }
+        },
+        {
           "client_id": "596138214200-phc2upeal5tucpe76u4dh2tbk2fpt6oj.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
