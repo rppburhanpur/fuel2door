@@ -71,7 +71,7 @@ public class User_Registration extends AppCompatActivity {
                 stringBuilder.append("+91");
                 stringBuilder.append(phone);
                 Toast.makeText(User_Registration.this, "number is " + stringBuilder.toString() , Toast.LENGTH_SHORT).show();
-                //sendforgetverificationcode(stringBuilder.toString());
+                sendforgetverificationcode(stringBuilder.toString());
             }
         });
 
@@ -81,7 +81,6 @@ public class User_Registration extends AppCompatActivity {
                 String code = otpedittext.getText().toString();
                 Toast.makeText(User_Registration.this, "inserted by you : "+code, Toast.LENGTH_SHORT).show();
                 putotp(code);
-
             }
         });
 
