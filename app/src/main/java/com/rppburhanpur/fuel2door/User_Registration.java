@@ -24,6 +24,11 @@ import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.PhoneAuthCredential;
 import com.google.firebase.auth.PhoneAuthProvider;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.concurrent.TimeUnit;
 
@@ -36,9 +41,7 @@ public class User_Registration extends AppCompatActivity {
     SharedPreferences.Editor sharedPreferencesEditor;
     private String mverificationID;
 
-//    private SharedPreferences.Editor editor;
-//
-//    private FirebaseUser firebaseUser;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,17 +55,13 @@ public class User_Registration extends AppCompatActivity {
         loginbutton = (Button) findViewById(R.id.loginbtn);
         mAuth = FirebaseAuth.getInstance();
 
-        
+
 
         sharedPreferencesEditor = this.getSharedPreferences("phone",MODE_PRIVATE).edit();
 
         FirebaseOptions firebaseOptions = FirebaseOptions.fromResource(this);
         FirebaseOptions.Builder  builder = new FirebaseOptions.Builder();
 
-//         firebaseUser = mAuth.getCurrentUser();
-//        Toast.makeText(this, ""+firebaseUser.getPhoneNumber()+"  and UID "+ firebaseUser.getUid(), Toast.LENGTH_LONG).show();
-//
-//        editor = getSharedPreferences("name",MODE_PRIVATE).edit();
 
         buttonotp.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -82,6 +81,7 @@ public class User_Registration extends AppCompatActivity {
                 String code = otpedittext.getText().toString();
                 Toast.makeText(User_Registration.this, "inserted by you : "+code, Toast.LENGTH_SHORT).show();
                 putotp(code);
+
             }
         });
 
@@ -128,16 +128,61 @@ public class User_Registration extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()) {
-
                     Toast.makeText(User_Registration.this, "login successsful", Toast.LENGTH_SHORT).show();
-//                    FirebaseUser firebaseUser = mAuth.getCurrentUser();
-//                   String phoneNUM = firebaseUser.getPhoneNumber();
-//                    sharedPreferencesEditor.putString("uid",phoneNUM);
-//                    sharedPreferencesEditor.apply();
-//                    sharedPreferencesEditor.commit();
+
                 }
             }
         });
 
     }
 }
+
+
+
+
+
+
+
+
+//------------------------------- Important comment code don't remove it---------------------------------------
+
+
+
+//                    FirebaseUser firebaseUser = mAuth.getCurrentUser();
+//                   String phoneNUM = firebaseUser.getPhoneNumber();
+//                    sharedPreferencesEditor.putString("uid",phoneNUM);
+//                    sharedPreferencesEditor.apply();
+//                    sharedPreferencesEditor.commit();
+
+//                myRef.addListenerForSingleValueEvent(new ValueEventListener() {
+//                    @Override
+//                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+//                        if(dataSnapshot.hasChild(phonenumber.getText().toString())){
+//                            Toast.makeText(User_Registration.this, "number exit", Toast.LENGTH_SHORT).show();
+//                        }else{
+//                            Toast.makeText(User_Registration.this, "does not exit", Toast.LENGTH_SHORT).show();
+//                        }
+//                    }
+//
+//                    @Override
+//                    public void onCancelled(@NonNull DatabaseError databaseError) {
+//
+//                    }
+//                });
+
+
+//         firebaseUser = mAuth.getCurrentUser();
+//        Toast.makeText(this, ""+firebaseUser.getPhoneNumber()+"  and UID "+ firebaseUser.getUid(), Toast.LENGTH_LONG).show();
+//
+//        editor = getSharedPreferences("name",MODE_PRIVATE).edit();
+
+
+//        FirebaseDatabase database = FirebaseDatabase.getInstance();
+//        final DatabaseReference myRef = database.getReference("Users");
+//
+
+
+
+//    private SharedPreferences.Editor editor;
+//
+//    private FirebaseUser firebaseUser;
