@@ -30,6 +30,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.io.PrintStream;
 import java.util.concurrent.TimeUnit;
 
 public class User_Registration extends AppCompatActivity {
@@ -54,8 +55,6 @@ public class User_Registration extends AppCompatActivity {
         otpedittext = (EditText) findViewById(R.id.otpet);
         loginbutton = (Button) findViewById(R.id.loginbtn);
         mAuth = FirebaseAuth.getInstance();
-
-
 
         sharedPreferencesEditor = this.getSharedPreferences("phone",MODE_PRIVATE).edit();
 
