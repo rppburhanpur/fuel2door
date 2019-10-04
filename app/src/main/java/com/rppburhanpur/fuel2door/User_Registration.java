@@ -16,6 +16,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -51,6 +52,8 @@ public class User_Registration extends AppCompatActivity {
     private Button english_button, hindi_button;
     private String IS_CURRENT_ENGLISH = "YES";
 
+    private RelativeLayout relativeLayout;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -73,6 +76,8 @@ public class User_Registration extends AppCompatActivity {
         english_button = (Button) findViewById(R.id.English);
         hindi_button = (Button) findViewById(R.id.Hindi);
 
+
+        relativeLayout = (RelativeLayout) findViewById(R.id.hiddenRELE);
         english_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -175,13 +180,13 @@ public class User_Registration extends AppCompatActivity {
             startActivity(intent);
             finish();
     }
-    private void setCurrentLanguage(boolean currentLanguage){
-        sharedPreferencesEditor.putBoolean(IS_CURRENT_ENGLISH,currentLanguage);
-        sharedPreferencesEditor.commit();
-    }
-    private boolean isCurrent_English(){
-        return sharedPreferences.getBoolean(IS_CURRENT_ENGLISH,true);
-    }
+//    private void setCurrentLanguage(boolean currentLanguage){
+//        sharedPreferencesEditor.putBoolean(IS_CURRENT_ENGLISH,currentLanguage);
+//        sharedPreferencesEditor.commit();
+//    }
+//    private boolean isCurrent_English(){
+//        return sharedPreferences.getBoolean(IS_CURRENT_ENGLISH,false);
+//}
 }
 
 
