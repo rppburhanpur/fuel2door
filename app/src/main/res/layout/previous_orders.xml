@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:background="#0A9067"
+    android:padding="5dp"
+    android:paddingStart="20dp"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ORDER NUMBER"
+        android:id="@+id/TV1"
+        android:textSize="10sp"
+        android:textColor="#FFFFFF"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ORDER NUMBER"
+        android:id="@+id/ordernumberTV"
+        android:textSize="10sp"
+        android:textColor="#FFFFFF"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ORDERED ON"
+        android:id="@+id/orderdateTV"
+        android:layout_below="@+id/ordernumberTV"
+        android:textSize="10sp"
+        android:textColor="#FFFFFF"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ORDER QUANTITY"
+        android:id="@+id/ordertotalquantityTV"
+        android:layout_below="@+id/orderdateTV"
+        android:textSize="10sp"
+        android:textColor="#FFFFFF"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Order Total Amount: 2352 Rs."
+        android:id="@+id/ordertotalamoundTV"
+        android:layout_below="@+id/ordertotalquantityTV"
+        android:textSize="16sp"
+        android:textColor="#FFFFFF"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Order Remark: Order Completed Successfully"
+        android:id="@+id/orderremarkTV"
+        android:layout_below="@+id/ordertotalamoundTV"
+        android:textSize="16sp"
+        android:textColor="#FFFFFF"
+        />
+
+</RelativeLayout>
