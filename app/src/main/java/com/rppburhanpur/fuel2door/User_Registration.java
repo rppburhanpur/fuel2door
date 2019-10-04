@@ -30,6 +30,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.io.PrintStream;
 import java.util.concurrent.TimeUnit;
 
 public class User_Registration extends AppCompatActivity {
@@ -55,8 +56,6 @@ public class User_Registration extends AppCompatActivity {
         loginbutton = (Button) findViewById(R.id.loginbtn);
         mAuth = FirebaseAuth.getInstance();
 
-
-
         sharedPreferencesEditor = this.getSharedPreferences("phone",MODE_PRIVATE).edit();
 
         FirebaseOptions firebaseOptions = FirebaseOptions.fromResource(this);
@@ -71,7 +70,7 @@ public class User_Registration extends AppCompatActivity {
                 stringBuilder.append("+91");
                 stringBuilder.append(phone);
                 Toast.makeText(User_Registration.this, "number is " + stringBuilder.toString() , Toast.LENGTH_SHORT).show();
-                //sendforgetverificationcode(stringBuilder.toString());
+                sendforgetverificationcode(stringBuilder.toString());
             }
         });
 
@@ -81,7 +80,6 @@ public class User_Registration extends AppCompatActivity {
                 String code = otpedittext.getText().toString();
                 Toast.makeText(User_Registration.this, "inserted by you : "+code, Toast.LENGTH_SHORT).show();
                 putotp(code);
-
             }
         });
 
