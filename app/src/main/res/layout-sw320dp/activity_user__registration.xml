@@ -86,7 +86,7 @@
             android:layout_height="@dimen/Fueltank_Height"
             android:scaleType="fitXY"
             android:src="@drawable/ic_gasicon"
-            android:layout_marginTop="160dp"
+            android:layout_marginTop="50dp"
             android:layout_centerHorizontal="true"
             android:layout_below="@id/Register_Button"></ImageView>
 
