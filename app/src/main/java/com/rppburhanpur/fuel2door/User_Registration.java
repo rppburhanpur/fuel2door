@@ -3,8 +3,13 @@ package com.rppburhanpur.fuel2door;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.ContentUris;
+import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.res.Configuration;
+import android.content.res.Resources;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.view.Display;
 import android.view.View;
 import android.view.Window;
@@ -29,8 +34,8 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-
 import java.io.PrintStream;
+import java.util.Locale;
 import java.util.concurrent.TimeUnit;
 
 public class User_Registration extends AppCompatActivity {
@@ -39,10 +44,12 @@ public class User_Registration extends AppCompatActivity {
     private Button buttonotp,loginbutton;
     private FirebaseAuth mAuth;
     private PhoneAuthProvider.OnVerificationStateChangedCallbacks mCallbacks;
+    SharedPreferences sharedPreferences;
     SharedPreferences.Editor sharedPreferencesEditor;
     private String mverificationID;
 
-
+    private Button english_button, hindi_button;
+    private String IS_CURRENT_ENGLISH = "YES";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,11 +63,33 @@ public class User_Registration extends AppCompatActivity {
         loginbutton = (Button) findViewById(R.id.loginbtn);
         mAuth = FirebaseAuth.getInstance();
 
-        sharedPreferencesEditor = this.getSharedPreferences("phone",MODE_PRIVATE).edit();
+        sharedPreferences = this.getSharedPreferences(IS_CURRENT_ENGLISH,MODE_PRIVATE);
+        sharedPreferencesEditor =sharedPreferences.edit();
 
         FirebaseOptions firebaseOptions = FirebaseOptions.fromResource(this);
         FirebaseOptions.Builder  builder = new FirebaseOptions.Builder();
 
+        //Language button initialization
+        english_button = (Button) findViewById(R.id.English);
+        hindi_button = (Button) findViewById(R.id.Hindi);
+
+        english_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                setLanguage("en");
+//                Intent intent = new Intent(User_Registration.this,User_Registration.class);
+//                startActivity(intent);
+            }
+        });
+
+        hindi_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                setLanguage("hi");
+//                Intent intent = new Intent(User_Registration.this,User_Registration.class);
+//                startActivity(intent);
+            }
+        });
 
         buttonotp.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -132,6 +161,26 @@ public class User_Registration extends AppCompatActivity {
             }
         });
 
+    }
+
+    private void setLanguage(String language){
+            Locale locale = new Locale(language);
+            Resources resources = getResources();
+            DisplayMetrics displayMetrics = resources.getDisplayMetrics();
+            Configuration configuration = resources.getConfiguration();
+            configuration.locale = locale;
+            resources.updateConfiguration(configuration,displayMetrics);
+            Toast.makeText(User_Registration.this, "Language Selected", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(User_Registration.this,User_Registration.class);
+            startActivity(intent);
+            finish();
+    }
+    private void setCurrentLanguage(boolean currentLanguage){
+        sharedPreferencesEditor.putBoolean(IS_CURRENT_ENGLISH,currentLanguage);
+        sharedPreferencesEditor.commit();
+    }
+    private boolean isCurrent_English(){
+        return sharedPreferences.getBoolean(IS_CURRENT_ENGLISH,true);
     }
 }
 

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Fuel2Door</string>
+    <string name="Registration">पंजीकरण</string>
+    <string name="enter_mobile">अपना मोबाइल नंबर दर्ज करें</string>
+    <string name="enter_otp">OTP दर्ज करें</string>
+    <string name="get_otp">OTP भेजें</string>
+    <string name="login">लॉग इन करें</string>
+    <string name="accept_term">हमारी शर्तों और सेवाओं को स्वीकार करें</string>
+    <string name="select_language">अपनी भाषा का चयन करें</string>
+    <string name="language_1">अंग्रेज़ी</string>
+    <string name="language_2">हिंदी</string>
+</resources>

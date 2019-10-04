@@ -1,8 +1,12 @@
 <resources>
     <string name="app_name">Fuel2Door</string>
     <string name="Registration">Registration</string>
-    <string name="enter_text">Enter Mobile No.</string>
+    <string name="enter_mobile">Enter Your Mobile No.</string>
     <string name="enter_otp">Enter OTP</string>
-    <string name="get_otp">GET OTP</string>
-    <string name="register">REGISTER</string>
+    <string name="get_otp">SEND OTP</string>
+    <string name="login">LOGIN</string>
+    <string name="accept_term">Accept Our Term And Services</string>
+    <string name="select_language">Select Your Language</string>
+    <string name="language_1">English</string>
+    <string name="language_2">Hindi</string>
 </resources>
