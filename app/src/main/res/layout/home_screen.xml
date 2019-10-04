@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="#0A9067"
+    >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40sp"
+        android:elevation="5dp"
+        android:padding="15dp"
+        android:id="@+id/RL1"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:text="Current Diesal Price"
+            android:id="@+id/decorationtext1"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="₹65.78"
+            android:textSize="40sp"
+            android:textColor="#3C5286"
+            android:id="@+id/decorationtext3"
+            android:layout_below="@+id/decorationtext1"
+            android:layout_centerHorizontal="true"
+            />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/RL2"
+        android:elevation="10dp"
+        android:background="#BE000000"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Account Status"
+            android:textSize="40sp"
+            android:textColor="#FFFFFF"
+            android:layout_centerInParent="true"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/RL3"
+        android:layout_below="@+id/RL1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100sp"
+        android:padding="30dp"
+        android:elevation="5dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Place Order Now"
+            android:id="@+id/decorationtext2"
+            android:textSize="30sp"
+            android:layout_centerHorizontal="true"
+            />
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/selectquantityspinner"
+            android:layout_below="@+id/decorationtext2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15sp"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/placeorderbtn"
+            android:layout_below="@+id/selectquantityspinner"
+            android:text="Place Order"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15sp"
+            android:background="#3C5286"
+            android:padding="10dp"
+            android:elevation="5dp"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:background="#3C5286"
+        android:padding="5dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Current Order : On Way"
+            android:id="@+id/bottombarorderstatus"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quatity: 50 Liters"
+            android:id="@+id/bottombarorderquantity"
+            android:layout_below="@+id/bottombarorderstatus"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Order Total: 3503rs"
+            android:id="@+id/bottombarordertotal"
+            android:layout_alignParentEnd="true"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quatity: 50 Liters"
+            android:id="@+id/bottombar"
+            android:layout_below="@+id/bottombarordertotal"
+            android:layout_alignParentEnd="true"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="See On Map"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:backgroundTint="#0A9067"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cancel Order"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:backgroundTint="#E42121"
+            />
+
+    </RelativeLayout>
+
+</RelativeLayout>
