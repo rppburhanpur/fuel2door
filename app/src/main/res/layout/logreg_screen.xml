@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="#0A9067"
+    >
+
+    <ImageView
+        android:layout_width="100sp"
+        android:layout_height="100sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70sp"
+        android:id="@+id/appicon"
+        android:elevation="5dp"
+        >
+
+    </ImageView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fuel2Door"
+        android:layout_below="@+id/appicon"
+        android:id="@+id/appname"
+        android:textSize="30sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20sp"
+        >
+
+    </TextView>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/appname"
+        android:id="@+id/RL1"
+        android:layout_marginTop="20sp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter Your Mobile Number"
+            android:id="@+id/mobilenumbertv"
+
+            >
+
+        </TextView>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/mobilenumberet"
+            android:layout_below="@+id/mobilenumbertv"
+            android:width="250sp"
+            >
+
+        </EditText>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/sendotpbtn"
+            android:layout_toRightOf="@+id/mobilenumberet"
+            android:layout_below="@id/mobilenumbertv"
+            android:text="Send OTP"
+            android:background="#3C5286"
+            >
+
+        </Button>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter OTP"
+            android:id="@+id/otptv"
+            android:layout_below="@+id/mobilenumberet"
+            android:layout_marginTop="20sp"
+            >
+
+        </TextView>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/otpet"
+            android:layout_below="@id/otptv"
+            android:width="250dp"
+            >
+
+        </EditText>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Accepting our Terms and Cervices"
+            android:id="@+id/tccheckbox"
+            android:layout_below="@+id/otpet"
+            android:layout_marginTop="20sp"
+            >
+
+        </CheckBox>
+
+    </RelativeLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/loginbtn"
+        android:layout_below="@id/RL1"
+        android:text="Login"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20sp"
+        android:background="#3C5286"
+        >
+
+    </Button>
+
+</RelativeLayout>
