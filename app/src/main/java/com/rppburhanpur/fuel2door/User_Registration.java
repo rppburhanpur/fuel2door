@@ -3,6 +3,7 @@ package com.rppburhanpur.fuel2door;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Display;
 import android.view.View;
@@ -20,6 +21,7 @@ import com.google.firebase.FirebaseTooManyRequestsException;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.PhoneAuthCredential;
 import com.google.firebase.auth.PhoneAuthProvider;
 
@@ -31,7 +33,7 @@ public class User_Registration extends AppCompatActivity {
     private Button buttonotp,loginbutton;
     private FirebaseAuth mAuth;
     private PhoneAuthProvider.OnVerificationStateChangedCallbacks mCallbacks;
-
+    SharedPreferences.Editor sharedPreferencesEditor;
     private String mverificationID;
 
 //    private SharedPreferences.Editor editor;
@@ -50,6 +52,9 @@ public class User_Registration extends AppCompatActivity {
         loginbutton = (Button) findViewById(R.id.loginbtn);
         mAuth = FirebaseAuth.getInstance();
 
+        
+
+        sharedPreferencesEditor = this.getSharedPreferences("phone",MODE_PRIVATE).edit();
 
         FirebaseOptions firebaseOptions = FirebaseOptions.fromResource(this);
         FirebaseOptions.Builder  builder = new FirebaseOptions.Builder();
@@ -118,14 +123,21 @@ public class User_Registration extends AppCompatActivity {
         signwithauth(credential);
     }
 
-    public void signwithauth(PhoneAuthCredential credential){
+    public void signwithauth(final PhoneAuthCredential credential){
         mAuth.signInWithCredential(credential).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()) {
+
                     Toast.makeText(User_Registration.this, "login successsful", Toast.LENGTH_SHORT).show();
+//                    FirebaseUser firebaseUser = mAuth.getCurrentUser();
+//                   String phoneNUM = firebaseUser.getPhoneNumber();
+//                    sharedPreferencesEditor.putString("uid",phoneNUM);
+//                    sharedPreferencesEditor.apply();
+//                    sharedPreferencesEditor.commit();
                 }
             }
         });
+
     }
 }
