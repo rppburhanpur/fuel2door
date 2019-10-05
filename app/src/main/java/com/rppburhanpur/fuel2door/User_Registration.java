@@ -9,15 +9,21 @@ import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.Display;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
+import android.widget.Switch;
 import android.widget.Toast;
+import android.widget.ToggleButton;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -54,6 +60,8 @@ public class User_Registration extends AppCompatActivity {
 
     private RelativeLayout relativeLayout;
 
+    private Switch aSwitch;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -75,7 +83,6 @@ public class User_Registration extends AppCompatActivity {
         //Language button initialization
         english_button = (Button) findViewById(R.id.English);
         hindi_button = (Button) findViewById(R.id.Hindi);
-
 
         relativeLayout = (RelativeLayout) findViewById(R.id.hiddenRELE);
         english_button.setOnClickListener(new View.OnClickListener() {
@@ -176,17 +183,20 @@ public class User_Registration extends AppCompatActivity {
             configuration.locale = locale;
             resources.updateConfiguration(configuration,displayMetrics);
             Toast.makeText(User_Registration.this, "Language Selected", Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(User_Registration.this,User_Registration.class);
-            startActivity(intent);
-            finish();
+//            Intent intent = new Intent(User_Registration.this,User_Registration.class);
+//            finish();
+//            startActivity(intent);
+            recreate();
     }
-//    private void setCurrentLanguage(boolean currentLanguage){
-//        sharedPreferencesEditor.putBoolean(IS_CURRENT_ENGLISH,currentLanguage);
-//        sharedPreferencesEditor.commit();
-//    }
-//    private boolean isCurrent_English(){
-//        return sharedPreferences.getBoolean(IS_CURRENT_ENGLISH,false);
-//}
+
+
+    private void setCurrentLanguage(boolean currentLanguage){
+        sharedPreferencesEditor.putBoolean(IS_CURRENT_ENGLISH,currentLanguage);
+        sharedPreferencesEditor.commit();
+    }
+    private boolean isCurrent_English(){
+        return sharedPreferences.getBoolean(IS_CURRENT_ENGLISH,true);
+}
 }
 
 
